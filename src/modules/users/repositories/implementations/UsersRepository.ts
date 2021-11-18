@@ -1,5 +1,3 @@
-import { response } from "express";
-
 import { User } from "../../model/User";
 import { IUsersRepository, ICreateUserDTO } from "../IUsersRepository";
 
@@ -47,8 +45,9 @@ class UsersRepository implements IUsersRepository {
   }
 
   turnAdmin(receivedUser: User): User {
-    receivedUser.admin = true;
-    receivedUser.created_at = new Date();
+    const user = receivedUser;
+    user.admin = true;
+    user.updated_at = new Date();
 
     return receivedUser;
   }
