@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Documentation API",
+        "title": "Users API",
         "description": "This is an API",
         "version": "1.0.0",
         "contact": {
@@ -103,7 +103,7 @@
         "/users/{user_id}": {
             "get": {
                 "tags": [
-                    "users"
+                    "Users"
                 ],
                 "summary": "List specific user",
                 "description": "List specific user by id",
@@ -155,10 +155,10 @@
         "/users/{user_id}/admin": {
             "patch": {
                 "tags": [
-                    "users"
+                    "Users"
                 ],
-                "summary": "Turn unser admin",
-                "description": "Turn unser admin by id",
+                "summary": "Turn user administrator",
+                "description": "Turn user admin by id",
                 "parameters": [
                     {
                         "name": "user_id",
